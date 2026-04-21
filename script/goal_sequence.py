@@ -21,9 +21,9 @@ class GoalSequenceNavigator:
 
         # Replace these later with your actual measured map coordinates
         self.waypoints = [
-            {"name": "Goal_A", "x": -0.240, "y": -0.165, "yaw": -0.636},
-            {"name": "Goal_B", "x":  2.533, "y": -14.772, "yaw": -1.401},
-            {"name": "Goal_C", "x":  3.997, "y": -24.274, "yaw": -1.436},
+            {"name": "Goal_A", "x": 1.92, "y": 1.45, "yaw": 0.76},
+            {"name": "Goal_B", "x":  1.3447, "y": 4.5617, "yaw": 0.0117},
+            {"name": "Goal_C", "x":  -0.3609, "y": 6.4622, "yaw": 0.0373},
         ]
 
         self.position_tolerance = rospy.get_param("~position_tolerance", 0.25)
