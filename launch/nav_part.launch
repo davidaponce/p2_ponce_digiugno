@@ -1,24 +1,16 @@
 <launch>
 
-    <!-- Start robot base -->
     <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
 
-    <!-- Localization using your map -->
     <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch">
-        <arg name="map_file" value="$(find p2_ponce_digiugno)/maps/lab_map.yaml" />
+        <arg name="map_file" value="/home/turtlebot/catkin_ws/src/p2_ponce_digiugno/maps/jakedavid.yaml" />
     </include>
 
-    <!-- Visualization -->
     <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch" />
 
-    <!-- Your navigation node -->
     <node pkg="p2_ponce_digiugno"
           type="goal_sequence.py"
-          name="goal_sequence_node"
-          output="screen">
-        <param name="position_tolerance" value="0.25"/>
-        <param name="angle_tolerance" value="0.30"/>
-    </node>
+          name="goal_sequence"
+          output="screen" />
 
 </launch>
-
