@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>p2_ponce_digiugno</name>
+  <version>0.0.1</version>
+  <description>Python solution for CS 424/524 Programming Assignment 2</description>
+
+  <maintainer email="your_email@example.com">David Ponce</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+
+  <export/>
+</package>
