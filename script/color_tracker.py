@@ -8,7 +8,7 @@ from geometry_msgs.msg import Twist
 
 TOPIC_RGB   = "/camera/color/image_raw"
 TOPIC_DEPTH = "/camera/depth/image_raw"
-TOPIC_CMD   = "/cmd_vel"
+TOPIC_CMD = "/cmd_vel_mux/input/teleop"
 
 TARGET_DIST = 1.0   # meters
 LINEAR_GAIN = 0.4   # how fast to approach/retreat
