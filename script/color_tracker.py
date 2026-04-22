@@ -11,10 +11,10 @@ TOPIC_DEPTH = "/camera/depth/image_raw"
 TOPIC_CMD = "/cmd_vel_mux/input/teleop"
 
 TARGET_DIST = 1.0   # meters
-LINEAR_GAIN = 0.4   # how fast to approach/retreat
-ANGULAR_GAIN = 0.003 # how fast to turn toward ball
-MAX_LINEAR  = 0.3   # m/s
-MAX_ANGULAR = 1.0   # rad/s
+LINEAR_GAIN = 0.6   # how fast to approach/retreat
+ANGULAR_GAIN = 0.005 # how fast to turn toward ball
+MAX_LINEAR  = 0.4   # m/s
+MAX_ANGULAR = 1.5   # rad/s
 MIN_AREA    = 500   # ignore tiny red blobs
 
 # Red spans two HSV ranges (wraps around 0/180)
