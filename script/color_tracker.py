@@ -19,8 +19,8 @@ MIN_AREA    = 500   # ignore tiny red blobs
 
 # Red spans two HSV ranges (wraps around 0/180)
 RED_RANGES = [
-    (np.array([0,   120, 70]), np.array([10,  255, 255])),
-    (np.array([170, 120, 70]), np.array([180, 255, 255])),
+    (np.array([0,   80, 70]), np.array([10,  255, 255])),
+    (np.array([160, 80, 70]), np.array([180, 255, 255])),
 ]
 
 bridge = CvBridge()
