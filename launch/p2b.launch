@@ -3,9 +3,5 @@
         type="color_tracker.py"
         name="ball_follower"
         output="screen">
-    <param name="rgb_topic" value="/camera/color/image_raw" />
-    <param name="depth_topic" value="/camera/depth/image_raw" />
-    <param name="cmd_vel_topic" value="/cmd_vel" />
-    <param name="target_distance" value="1.0" />
   </node>
 </launch>
