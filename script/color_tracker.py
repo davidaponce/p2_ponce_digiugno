@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#chmod +x ~/catkin_ws/src/p2_ponce_digiugno/scripts/color_tracker.py
 
 import rospy
 import cv2
@@ -15,7 +16,7 @@ class BallFollower:
 
         self.bridge = CvBridge()
 
-        self.rgb_topic = rospy.get_param("~rgb_topic", "/camera/rgb/image_raw")
+        self.rgb_topic = rospy.get_param("~rgb_topic", "/camera/color/image_raw")
         self.depth_topic = rospy.get_param("~depth_topic", "/camera/depth/image_raw")
         self.cmd_vel_topic = rospy.get_param("~cmd_vel_topic", "/cmd_vel")
 
