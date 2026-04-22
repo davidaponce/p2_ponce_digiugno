@@ -55,6 +55,7 @@ class BallFollower:
             # Common depth encodings:
             # 32FC1 -> meters
             # 16UC1 -> usually millimeters
+            rospy.loginfo_once("Depth shape: %s dtype: %s", self.latest_depth.shape, self.latest_depth.dtype)
             self.latest_depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding="passthrough")
         except CvBridgeError as e:
             rospy.logerr("Depth CvBridge error: %s", e)
@@ -186,6 +187,9 @@ class BallFollower:
 
             cmd = self.compute_cmd(ball_center, frame.shape[1], distance)
             self.cmd_pub.publish(cmd)
+            #debug movement
+            rospy.loginfo("center=%s distance=%s lin=%.3f ang=%.3f",
+              str(ball_center), str(distance), cmd.linear.x, cmd.angular.z)
 
             cv2.imshow("Ball Follower RGB", frame)
             cv2.imshow("Red Mask", mask if mask is not None else np.zeros((100, 100), dtype=np.uint8))
