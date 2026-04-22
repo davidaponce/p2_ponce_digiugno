@@ -12,7 +12,7 @@ TOPIC_CMD = "/cmd_vel_mux/input/teleop"
 
 TARGET_DIST = 1.0   # meters
 LINEAR_GAIN = 0.6   # how fast to approach/retreat
-ANGULAR_GAIN = 0.005 # how fast to turn toward ball
+ANGULAR_GAIN = 0.01 # how fast to turn toward ball
 MAX_LINEAR  = 0.4   # m/s
 MAX_ANGULAR = 1.5   # rad/s
 MIN_AREA    = 500   # ignore tiny red blobs
